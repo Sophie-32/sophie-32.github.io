@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sophie Felder, Content Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0E0E0E;
+      --navy: #1B2A4A;
+      --robin: #5BB8C4;
+      --off-white: #FAFAF8;
+      --warm-gray: #6B6B68;
+      --light-gray: #E8E8E4;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', Helvetica, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--off-white);
+      color: var(--black);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 3rem;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--warm-gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); }
+
+    /* HERO */
+    .hero {
+      background: var(--black);
+      color: var(--off-white);
+      padding: 9rem 3rem 6rem;
+      min-height: 75vh;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-inner {
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--robin);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      color: var(--off-white);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--robin);
+    }
+
+    .hero-body {
+      max-width: 560px;
+    }
+
+    .hero-body p {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: #B0B0AA;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-body p:last-child { margin-bottom: 0; }
+
+    .hero-body strong {
+      color: var(--off-white);
+      font-weight: 400;
+    }
+
+    /* WORK SECTION */
+    .work-section {
+      background: var(--navy);
+      padding: 5rem 3rem;
+    }
+
+    .work-section h2 {
+      font-family: var(--serif);
+      font-size: 0.875rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--robin);
+      margin-bottom: 3rem;
+      letter-spacing: 0.02em;
+    }
+
+    .project-list { list-style: none; }
+
+    .project-item {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 2rem 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      transition: background 0.2s;
+    }
+
+    .project-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+    .project-item a {
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      gap: 2rem;
+    }
+
+    .project-number {
+      font-family: var(--serif);
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.25);
+      margin-top: 0.35rem;
+      flex-shrink: 0;
+      width: 2rem;
+    }
+
+    .project-info { flex: 1; }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .project-item a:hover .project-title { color: var(--robin); }
+
+    .project-tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .project-arrow {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.2);
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .project-item a:hover .project-arrow {
+      color: var(--robin);
+      transform: translateX(4px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      padding: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: #B0B0AA;
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--robin); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+    .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-body { animation: fadeUp 0.6s 0.2s ease both; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 7rem 1.5rem 4rem; }
+      .work-section { padding: 3rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">Sophie Felder</a>
+    <div class="nav-links">
+      <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+      <a href="mailto:felder.sophie@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Content Designer</p>
+      <h1>I write words that help<br>people <em>use things.</em></h1>
+      <div class="hero-body">
+        <p>I've been doing it for 13 years across non-profits, public diplomacy, consulting, and for the last 7 years, digital products.</p>
+        <p>Right now I'm at Canonical, an open source software company, where I work on product copy, content systems, and AI tools for designers.</p>
+        <p><strong>I used AI to build this portfolio and I can make it work for you too.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-section">
+    <h2>I'll let my work speak for itself.</h2>
+    <ul class="project-list">
+      <li class="project-item">
+        <a href="case-study-gems.html">
+          <span class="project-number">01</span>
+          <div class="project-info">
+            <div class="project-title">How I turned a content bottleneck into a team capability using AI</div>
+            <div class="project-tag">AI tooling &middot; Gemini Gems &middot; Canonical</div>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+      </li>
+      <li class="project-item">
+        <a href="case-study-guidelines.html">
+          <span class="project-number">02</span>
+          <div class="project-info">
+            <div class="project-title">How I built content foundations for a design system from scratch</div>
+            <div class="project-tag">Content systems &middot; Design systems &middot; Canonical</div>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+      </li>
+      <li class="project-item">
+        <a href="case-study-cms.html">
+          <span class="project-number">03</span>
+          <div class="project-info">
+            <div class="project-title">How I unblocked a stalled CMS project with a flexible design framework</div>
+            <div class="project-tag">UX design &middot; Stakeholder alignment &middot; Canonical</div>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="mailto:felder.sophie@gmail.com">felder.sophie@gmail.com</a>
+    <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+  </footer>
+
+</body>
+</html>
