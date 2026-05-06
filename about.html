@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sophie Felder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="case-study.css" />
+  <style>
+    .about-header {
+      background: var(--black);
+      color: var(--off-white);
+      padding: 9rem 3rem 5rem;
+    }
+
+    .about-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .about-header p {
+      font-size: 1.0625rem;
+      color: #B0B0AA;
+      max-width: 560px;
+      line-height: 1.7;
+      font-family: var(--serif);
+      font-style: italic;
+    }
+
+    .about-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+    }
+
+    .about-section {
+      margin-bottom: 3rem;
+    }
+
+    .about-label {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--robin-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .credential-item {
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .credential-item:first-of-type {
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .credential-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .credential-org {
+      font-size: 0.9375rem;
+      color: var(--warm-gray);
+      margin-bottom: 0.25rem;
+    }
+
+    .credential-detail {
+      font-size: 0.875rem;
+      color: var(--warm-gray);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    .about-divider {
+      border: none;
+      border-top: 1px solid var(--light-gray);
+      margin: 3rem 0;
+    }
+
+    @media (max-width: 640px) {
+      .about-header { padding: 7rem 1.5rem 3rem; }
+      .about-body { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">Sophie Felder</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+      <a href="mailto:felder.sophie@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header class="about-header">
+    <h1>About</h1>
+    <p>13 years of experience across public diplomacy, behavior change, consulting, and digital product design.</p>
+  </header>
+
+  <main class="about-body">
+
+    <section class="about-section">
+      <div class="about-label">Education</div>
+
+      <div class="credential-item">
+        <span class="credential-title">M.A. Media and Public Affairs</span>
+        <span class="credential-org">The George Washington University, Washington DC</span>
+      </div>
+
+      <div class="credential-item">
+        <span class="credential-title">B.A. Political Science, Minor in Economics</span>
+        <span class="credential-org">Yeshiva University, New York NY</span>
+      </div>
+    </section>
+
+    <hr class="about-divider" />
+
+    <section class="about-section">
+      <div class="about-label">Certifications</div>
+
+      <div class="credential-item">
+        <span class="credential-title">Nielsen Norman Group UX Certificate</span>
+        <span class="credential-detail">Interaction design, writing for the web, digital content, and information architecture</span>
+      </div>
+
+      <div class="credential-item">
+        <span class="credential-title">Google UX Design Certificate</span>
+        <span class="credential-detail">End-to-end UX process including research, prototyping, and testing</span>
+      </div>
+
+      <div class="credential-item">
+        <span class="credential-title">Prosci Certified Change Practitioner</span>
+        <span class="credential-detail">Change management strategy for complex organizations</span>
+      </div>
+
+      <div class="credential-item">
+        <span class="credential-title">National Social Marketing Centre Level 4</span>
+        <span class="credential-detail">Design thinking for social impact challenges</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="mailto:felder.sophie@gmail.com">felder.sophie@gmail.com</a>
+    <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+  </footer>
+
+</body>
+</html>
