@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Writing Tools — Sophie Felder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="case-study.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="index.html">Sophie Felder</a>
+    <div class="nav-links">
+      <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+      <a href="mailto:felder.sophie@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <header class="cs-header">
+    <a class="cs-back" href="index.html">← Back</a>
+    <div class="cs-tag">AI tooling &middot; Gemini Gems &middot; Canonical</div>
+    <h1>How I turned a content bottleneck into a team capability using AI</h1>
+    <p class="cs-summary">Built two Gemini Gems in 8 hours that were adopted by 5+ teams, cut my review time in half, and taught designers to make better content decisions on their own.</p>
+  </header>
+
+  <main class="cs-body">
+
+    <section class="cs-section">
+      <div class="cs-section-label">Challenge</div>
+      <p>As the only content designer at Canonical, I was a bottleneck. Designers were writing UX copy and long-form content like newsletters and blog posts without a content reference they could use on their own. They'd come to me for copy checks, edits, and reviews. The real problem wasn't the volume of requests. It was that every review was a missed opportunity to build content capability in the team.</p>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-section-label">My role</div>
+      <p>I identified the need, designed and built two Gemini Gems from scratch, and kept them updated based on direct designer feedback. I owned the whole process from problem framing to prompt engineering to monthly refinement. This wasn't a sanctioned project. I started it independently and let adoption make the case.</p>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-section-label">What I built</div>
+
+      <h2>Canonical UX writing bot</h2>
+      <img src="ux-writing-bot.png" alt="Canonical UX writing bot interface in Gemini" class="cs-image" />
+      <p>A tool designers could use to write or review interface copy on their own. Every request returned three options, each grounded in UX best practices and Canonical's internal copy style guide. Every option came with a justification explaining which heuristic it followed and why. Designers weren't just getting copy. They were learning the reasoning behind it.</p>
+      <p>The Gem could also review screenshots of existing copy and suggest improvements with the same level of justification. After noticing that content writers were consistently skipping alt text or writing it poorly, I added an accessibility feature so designers could upload an image and ask the Gem to write or review alt text. This wasn't in the original scope. I added it because I saw the need.</p>
+
+      <h2 style="margin-top: 2rem;">Canonical editing bot</h2>
+      <img src="editing-bot.png" alt="Canonical editing bot interface in Gemini" class="cs-image" />
+      <p>I built this one to reduce my review load on long-form content without taking ownership away from designers. Rather than correcting copy, the Gem flagged potential style guide violations and explained why each one was flagged. Passive voice, inconsistent terminology, tone deviations. The designer could decide what to do with that information. I also built in an "Unlock editorial mode" for designers who wanted fuller stylistic feedback beyond style guide compliance. The goal was a tool that taught, not just corrected.</p>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-section-label">Discovery and rationale</div>
+      <p>I made a deliberate decision not to build tools that just gave answers. Autocorrecting copy would have made designers faster but not better. It also would have kept me in the loop indefinitely. By requiring both Gems to justify every suggestion, I turned productivity tools into learning tools. That was the core design decision.</p>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-section-label">Before and after</div>
+      <div class="before-after">
+        <div class="ba-card before">
+          <div class="ba-label">Before</div>
+          <ul>
+            <li>Manual first-pass editor for all long-form content</li>
+            <li>Ad hoc UX copy requests designers could have handled independently</li>
+            <li>Alt text written poorly or skipped entirely</li>
+            <li>Every review kept me in the loop instead of building team capability</li>
+          </ul>
+        </div>
+        <div class="ba-card after">
+          <div class="ba-label">After</div>
+          <ul>
+            <li>Long-form content arrives in noticeably better shape before it reaches me</li>
+            <li>Designers making more confident, independent copy decisions</li>
+            <li>Alt text quality improved across the team</li>
+            <li>Review time cut by more than half</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="cs-divider" />
+
+    <section class="cs-section">
+      <div class="cs-section-label">Impact</div>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-stat">8 hrs</div>
+          <div class="impact-desc">Total build time for both Gems</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-stat">5+</div>
+          <div class="impact-desc">Teams adopted organically, without a formal rollout</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-stat">&gt;50%</div>
+          <div class="impact-desc">Reduction in long-form review time</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-stat">5</div>
+          <div class="impact-desc">Designers cited the Gems unprompted in formal 360 feedback</div>
+        </div>
+      </div>
+      <ul style="margin-top: 1.5rem;">
+        <li>Iterated monthly based on feedback from at least 3 designers across multiple cycles</li>
+        <li>Added alt text capability after identifying an accessibility gap not in the original brief</li>
+        <li>Long-form content quality improved measurably before it even reaches review stage</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="mailto:felder.sophie@gmail.com">felder.sophie@gmail.com</a>
+    <a href="https://www.linkedin.com/in/sophie-felder-39305128/" target="_blank">LinkedIn</a>
+  </footer>
+
+</body>
+</html>
